@@ -1,4 +1,4 @@
-## Git
+# Git
 ### Prework
 Create a new repository in github.
 
@@ -20,7 +20,7 @@ git push origin main
 ```
 
 
-## Rubocop
+# Rubocop
 ### Prework
 We need an empty Gemfile so create it:
 ```
@@ -80,4 +80,35 @@ Metrics/BlockLength:
     - 'spec/**/*'
 ```
 
+# RSpec
 
+### Prework
+Add a spec directory to the project root directory:
+```
+touch spec
+```
+
+### CLI
+Run the following:
+
+```
+bundle add rspec --group development,test
+bundle exec rspec --init
+```
+
+### Edit .rspec
+Add the line:
+```
+--format documentation
+```
+
+### Test it:
+At the CLI run:
+```
+bundle exec rspec
+```
+You should see output similar to:
+```
+Finished in 0.00033 seconds (files took 0.0879 seconds to load)
+0 examples, 0 failures
+```
