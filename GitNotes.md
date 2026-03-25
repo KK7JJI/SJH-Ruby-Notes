@@ -24,3 +24,33 @@ Finally to delete the branch:
 git branch -d refactor
 ```
 
+# Repair an archive
+Check the git archive:
+```
+git fsck
+git fsck --full
+```
+
+To try and salvage existing commits:
+```
+git gc --prune=now --aggressive
+```
+or
+```
+git repack -a -d
+```
+
+Re-initialize the archive (prior commits will be lost)
+```
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin git@github.com:KK7JJI/Ruby_Sorting.git
+git push -u origin main
+```
+
+To force a push to GitHub:
+```
+git push -u origin main --force
+```
